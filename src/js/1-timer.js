@@ -10,7 +10,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 // x-mas :)
 
 iziToast.show({
-  image: './src/img/x-mas.jpg',
+  image: '/src/img/x-mas.jpg',
   imageWidth: 150,
   position: 'center',
   title: `Merry X-mas!`,
