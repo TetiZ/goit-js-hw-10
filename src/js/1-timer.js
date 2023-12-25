@@ -62,6 +62,7 @@ const startTimer = () => {
       clearInterval(timerId);
     }
   }, 1000);
+  startBtn.setAttribute('disabled', true);
 };
 
 // налаштування конвертації часу в дні, години, хвилини, секунди
@@ -83,11 +84,15 @@ const convertMs = ms => {
 // налаштування оновлення значень на сторінці
 
 const updateTimerDisplay = () => {
-  daysQuantity.textContent = `${timeCounter.days}`;
-  hoursQuantity.textContent = `${timeCounter.hours}`;
-  minutesQuantity.textContent = `${timeCounter.minutes}`;
-  secondsQuantity.textContent = `${timeCounter.seconds}`;
+  daysQuantity.textContent = formatNumbers(timeCounter.days);
+  hoursQuantity.textContent = formatNumbers(timeCounter.hours);
+  minutesQuantity.textContent = formatNumbers(timeCounter.minutes);
+  secondsQuantity.textContent = formatNumbers(timeCounter.seconds);
 };
 
+// форматування чисел
+const formatNumbers = value => {
+  return value.toString().padStart(2, '0');
+};
 // активація кнопки і таймера
 startBtn.addEventListener('click', startTimer);
