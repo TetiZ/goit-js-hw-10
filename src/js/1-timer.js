@@ -10,11 +10,12 @@ import 'izitoast/dist/css/iziToast.min.css';
 // x-mas :)
 
 iziToast.show({
-  image: '../img/x-mas.jpg',
+  image:
+    'https://imagespulse.com/wp-content/uploads/2022/11/We-Wish-You-a-Merry-Christmas-Images.jpg',
   imageWidth: 150,
   position: 'center',
   title: `Merry X-mas!`,
-  message: `Спасибі, що допомагаєте навіть у свята:)`,
+  message: `Спасибі за Вашу підтримку:)`,
   layout: 2,
 });
 
