@@ -14,17 +14,21 @@ const createPromise = (resolve, reject) => {
   const rejectBtn = document.querySelector('[value="rejected"]:checked');
 
   if (fulfillBtn) {
-    setTimeout(() => resolve(delayValue), delayValue);
-    iziToast.success({
-      message: `✅ Fulfilled promise in ${delayValue}ms`,
-      position: 'topRight',
-    });
+    setTimeout(() => {
+      resolve(delayValue);
+      iziToast.success({
+        message: `✅ Fulfilled promise in ${delayValue}ms`,
+        position: 'topRight',
+      });
+    }, delayValue);
   } else if (rejectBtn) {
-    setTimeout(() => reject(delayValue), delayValue);
-    iziToast.error({
-      message: `❌ Rejected promise in ${delayValue}ms`,
-      position: 'topRight',
-    });
+    setTimeout(() => {
+      reject(delayValue);
+      iziToast.error({
+        message: `❌ Rejected promise in ${delayValue}ms`,
+        position: 'topRight',
+      });
+    }, delayValue);
   }
 };
 
