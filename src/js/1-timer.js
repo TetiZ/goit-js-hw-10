@@ -7,6 +7,17 @@ import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+// x-mas :)
+
+iziToast.show({
+  image: '../img/x-mas.jpg',
+  imageWidth: 150,
+  position: 'center',
+  title: `Merry X-mas!`,
+  message: `Спасибі, що допомагаєте навіть у свята:)`,
+  layout: 2,
+});
+
 // Змінні
 
 const input = document.querySelector('#datetime-picker');
